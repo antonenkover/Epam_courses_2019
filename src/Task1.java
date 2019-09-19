@@ -7,14 +7,14 @@ public class Task1 {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter the binary number: ");
         String binNum = in.nextLine();
-        System.out.println(ConvertToDecimal(binNum));
+        System.out.println(convertToDecimal(binNum));
     }
 
-    public static int ConvertToDecimal (String binString) {
+    public static int convertToDecimal (String binString) {
         int convertedNum = 0;
-        int binlength = binString.length() - 1;
-        for (int i = 0; i <= binlength; i++) {
-            convertedNum += Character.getNumericValue(binString.charAt(i)) * (int) Math.pow(2, (binlength - i));
+        int binLength = binString.length() - 1;
+        for (int i = 0; i <= binLength; i++) {
+            convertedNum += Character.getNumericValue(binString.charAt(i)) * (int) Math.pow(2, (binLength - i));
         }
         return(convertedNum);
     }

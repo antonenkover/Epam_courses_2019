@@ -1,3 +1,5 @@
+package com.company;
+
 import java.util.Scanner;
 
 public class Task2 {
@@ -8,9 +10,15 @@ public class Task2 {
 
         System.out.println("Enter the number: ");
 
-        int reverseNum = ~in.nextInt() + 1;
+        int enteredNum = in.nextInt();
 
-        System.out.println(reverseNum);
+        System.out.println(returnReverseNum(enteredNum));
+    }
+
+    public static int returnReverseNum (int enteredNum) {
+
+        int reverseNum = ~enteredNum + 1;
+        return reverseNum;
     }
 
 }
